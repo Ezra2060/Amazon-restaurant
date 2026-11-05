@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery & Menu | Amazon Restaurant Nairobi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="navbar-container">
+            <a href="Home.html" class="brand-logo">
+                <div class="brand-icon">🍽</div>
+                <div class="brand-text-wrap">
+                    <span class="brand-title">AMAZON</span>
+                    <span class="brand-subtitle">Restaurant & Resort</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Gallery.html" class="active">Gallery & Menu</a>
+                <a href="Contact Us.html">Contact Us</a>
+                <a href="Book now.html" class="nav-cta-btn">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80');">
+            <div class="page-hero-content">
+                <span class="section-tag">A Feast for the Senses</span>
+                <h1>Our Culinary Menu & Gallery</h1>
+                <p>Explore our gourmet creations, fresh ingredients, and serene luxury atmosphere in Westlands, Nairobi.</p>
+            </div>
+        </section>
+
+        <section class="content-container">
+
+            <!-- INTERACTIVE CATEGORY FILTER -->
+            <div class="gallery-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Offerings</button>
+                <button class="filter-btn" data-filter="mains">Mains & Grills</button>
+                <button class="filter-btn" data-filter="italian">Pizza & Pasta</button>
+                <button class="filter-btn" data-filter="seafood">Seafood Specialties</button>
+                <button class="filter-btn" data-filter="healthy">Salads & Healthy</button>
+                <button class="filter-btn" data-filter="ambiance">Ambiance & Spaces</button>
+            </div>
+
+            <!-- INTERACTIVE GALLERY GRID -->
+            <div class="gallery-grid" id="gallery-container">
+
+                <!-- 1. STEAK -->
+                <div class="gallery-item" data-category="mains">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                             alt="Tender Prime Ribeye Steak">
+                        <span class="gallery-overlay-badge">KSh 1,500</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Tender Prime Ribeye Steak</h3>
+                        </div>
+                        <p>Grilled aged prime beef steak cooked to perfection with herb garlic butter, accompanied by roasted baby potatoes and red wine reduction.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Chef's Cut</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SEAFOOD PLATTER -->
+                <div class="gallery-item" data-category="seafood">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Seafood Platter">
+                        <span class="gallery-overlay-badge">KSh 2,000</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Royal Seafood Platter</h3>
+                        </div>
+                        <p>An exquisite bounty of fresh grilled tiger shrimp, tender calamari, pan-seared red snapper, and saffron butter rice.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Fresh Catch</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ARTISANAL PIZZA -->
+                <div class="gallery-item" data-category="italian">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" 
+                             alt="Amazon Wood-Fired Pizza">
+                        <span class="gallery-overlay-badge">KSh 1,000</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Amazon Wood-Fired Pizza</h3>
+                        </div>
+                        <p>Crisp hand-tossed artisan dough topped with rich mozzarella, savory tomato pomodoro, spicy beef pepperoni, and fresh basil.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Wood-Fired</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. GOURMET BURGER -->
+                <div class="gallery-item" data-category="mains">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" 
+                             alt="Gourmet Prime Beef Burger">
+                        <span class="gallery-overlay-badge">KSh 800</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Gourmet Prime Beef Burger</h3>
+                        </div>
+                        <p>Juicy 200g prime beef patty on a brioche bun with crisp iceberg lettuce, caramelized onions, melted cheddar, and secret house sauce.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Popular</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. CLASSIC PASTA -->
+                <div class="gallery-item" data-category="italian">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281699?auto=format&fit=crop&w=800&q=80" 
+                             alt="Classic Italian Truffle Pasta">
+                        <span class="gallery-overlay-badge">KSh 900</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Classic Italian Pomodoro Pasta</h3>
+                        </div>
+                        <p>Al dente fettuccine tossed in aromatic slow-simmered vine tomato sauce, extra virgin olive oil, parmesan shavings, and cracked black pepper.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Vegetarian</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. FRESH GARDEN SALAD -->
+                <div class="gallery-item" data-category="healthy">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" 
+                             alt="Amazon Mediterranean Garden Salad">
+                        <span class="gallery-overlay-badge">KSh 600</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Garden Wellness Salad</h3>
+                        </div>
+                        <p>Crisp garden greens, avocado, cherry tomatoes, cucumbers, kalamata olives, and feta cheese drizzled with citrus balsamic vinaigrette.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Healthy Choice</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. SWAHILI PILAU & BEEF STEW -->
+                <div class="gallery-item" data-category="mains">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80" 
+                             alt="Swahili Spiced Pilau with Braised Beef">
+                        <span class="gallery-overlay-badge">KSh 1,200</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Swahili Spiced Pilau & Beef</h3>
+                        </div>
+                        <p>Authentic East African spiced rice infused with cardamom, cinnamon, and cumin, served alongside tender braised beef stew and kachumbari.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Heritage Dish</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. CRISPY GRILLED TILAPIA -->
+                <div class="gallery-item" data-category="seafood">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80" 
+                             alt="Lake Victoria Whole Tilapia">
+                        <span class="gallery-overlay-badge">KSh 1,400</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Lake Victoria Whole Tilapia</h3>
+                        </div>
+                        <p>Deep-fried or dry-rubbed whole fish spiced with Swahili masala, accompanied by traditional white ugali and sautéed sukuma wiki greens.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Local Specialty</span>
+                            <a href="Book now.html" class="btn-order-direct">Reserve Dish &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. RESTAURANT INTERIOR / AMBIANCE -->
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" 
+                             alt="Amazon Restaurant Dining Hall">
+                        <span class="gallery-overlay-badge">Main Hall</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Main Luxury Dining Hall</h3>
+                        </div>
+                        <p>Warm ambient lighting, mahogany finishings, and plush seating curated for intimate dinner dates, family lunches, and celebration feasts.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Ambiance</span>
+                            <a href="Book now.html" class="btn-order-direct">Book This Hall &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. EXECUTIVE CONFERENCE HALL -->
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image-box" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" 
+                             alt="Executive Banqueting & Conference Suites">
+                        <span class="gallery-overlay-badge">Events Suite</span>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="item-header">
+                            <h3>Executive Conference Suite</h3>
+                        </div>
+                        <p>Spacious, fully air-conditioned executive banqueting hall equipped with high-speed AV systems, projector screens, and private catering.</p>
+                        <div class="item-footer">
+                            <span class="item-tag">Corporate</span>
+                            <a href="Services.html" class="btn-order-direct">Inquire Booking &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LUXURY PRICE & MENU SHEET -->
+            <div class="section-heading-wrapper" style="margin-top: 50px;">
+                <span class="section-tag">Complete Price Guide</span>
+                <h2>Official Culinary Price List</h2>
+                <p>Transparent pricing, transparent quality. All rates in Kenyan Shillings (KSh) inclusive of statutory taxes.</p>
+            </div>
+
+            <div class="menu-table-card">
+                <table class="luxury-table">
+                    <thead>
+                        <tr>
+                            <th>Dish & Culinary Category</th>
+                            <th>Description & Key Ingredients</th>
+                            <th>Special Notes</th>
+                            <th>Price (KSh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="dish-name">Tender Prime Ribeye Steak</td>
+                            <td>Aged prime beef steak grilled to your preferred temperature, served with garlic herb butter, seasonal vegetables, and jus.</td>
+                            <td><span class="item-tag">Chef Signature</span></td>
+                            <td class="dish-price">1,500 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Royal Seafood Platter</td>
+                            <td>A lavish assortment of jumbo grilled tiger prawns, red snapper fillet, calamari rings, and lemon butter sauce.</td>
+                            <td><span class="item-tag">Seafood Catch</span></td>
+                            <td class="dish-price">2,000 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Swahili Spiced Pilau with Braised Beef</td>
+                            <td>Fragrant coastal basmati rice steeped in aromatic spices with tender slow-cooked beef chunks and kachumbari relish.</td>
+                            <td><span class="item-tag">Kenyan Heritage</span></td>
+                            <td class="dish-price">1,200 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Amazon Wood-Fired Pizza</td>
+                            <td>Handmade artisan thin crust with tomato reduction, melted fresh mozzarella cheese, beef pepperoni, and oregano.</td>
+                            <td><span class="item-tag">Wood-Fired</span></td>
+                            <td class="dish-price">1,000 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Classic Italian Pomodoro Pasta</td>
+                            <td>Al dente Italian pasta tossed in slow-cooked sun-ripened tomato basil sauce, virgin olive oil, and aged parmesan.</td>
+                            <td><span class="item-tag">Vegetarian</span></td>
+                            <td class="dish-price">900 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Gourmet Prime Beef Burger</td>
+                            <td>Juicy grilled beef patty topped with aged cheddar, crisp greens, ripe tomato slice, and potato wedges.</td>
+                            <td><span class="item-tag">Customer Favorite</span></td>
+                            <td class="dish-price">800 KSh</td>
+                        </tr>
+                        <tr>
+                            <td class="dish-name">Fresh Mediterranean Garden Salad</td>
+                            <td>Assorted farm-fresh organic greens, crunchy cucumber, cherry tomatoes, kalamata olives, and light herb vinaigrette.</td>
+                            <td><span class="item-tag">Healthy / Vegan</span></td>
+                            <td class="dish-price">600 KSh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- RESERVATION BANNER -->
+            <div style="text-align: center; margin: 40px 0;">
+                <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 20px;">Ready to taste the culinary magic of Amazon Restaurant?</p>
+                <a href="Book now.html" class="btn btn-primary">Book Your Reservation Today</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR IMAGES -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)">
+        <div class="lightbox-content-box">
+            <button class="lightbox-close-btn" onclick="forceCloseLightbox()">&times;</button>
+            <img id="lightboxImg" src="" alt="Enlarged Dish Preview">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-top">
+            <div class="footer-col footer-about">
+                <div class="brand-logo" style="margin-bottom: 15px;">
+                    <div class="brand-icon">🍽</div>
+                    <div class="brand-text-wrap">
+                        <span class="brand-title">AMAZON</span>
+                        <span class="brand-subtitle">Restaurant & Resort</span>
+                    </div>
+                </div>
+                <p>
+                    Founded in 2002 in Westlands, Nairobi. Dedicated to supreme culinary craftsmanship, heartfelt Kenyan hospitality, and serene wellness experiences.
+                </p>
+                <div class="social-pills-list" style="justify-content: flex-start;">
+                    <a href="https://wa.me/254791417772" target="_blank" class="social-pill">WhatsApp</a>
+                    <a href="Services.html" class="social-pill">Instagram</a>
+                    <a href="Services.html" class="social-pill">Facebook</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Us.html">About Us & Heritage</a></li>
+                    <li><a href="Gallery.html">Menu & Price List</a></li>
+                    <li><a href="Services.html">Services & Contact</a></li>
+                    <li><a href="Book now.html">Table Reservation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dining Hours</h4>
+                <ul class="footer-hours-list">
+                    <li>
+                        <strong>Breakfast & Brunch</strong>
+                        Mon - Sun: 7:00 AM – 11:30 AM
+                    </li>
+                    <li>
+                        <strong>Lunch & Afternoon Lounge</strong>
+                        Mon - Sun: 12:00 PM – 4:30 PM
+                    </li>
+                    <li>
+                        <strong>Dinner & Cocktails</strong>
+                        Mon - Sun: 5:00 PM – 11:30 PM
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Find Us in Nairobi</h4>
+                <div class="footer-contact-item">
+                    <span class="icon">📍</span>
+                    <span>Woodvale Grove, Westlands, Nairobi, Kenya</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:+254791417772">+254 791 417 772</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:ezimbios@email.com">ezimbios@email.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> Amazon Restaurant & Resort. All Rights Reserved. Crafted for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Category Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = img.alt;
+            lightboxModal.classList.add('active');
+        }
+
+        function closeLightbox(e) {
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.remove('active');
+            }
+        }
+
+        function forceCloseLightbox() {
+            lightboxModal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

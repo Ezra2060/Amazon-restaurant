@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & Concierge | Amazon Restaurant Nairobi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .map-card-placeholder {
+            background: rgba(14, 23, 38, 0.95);
+            border: 1px dashed var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .map-card-placeholder .map-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--gold-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="navbar-container">
+            <a href="Home.html" class="brand-logo">
+                <div class="brand-icon">🍽</div>
+                <div class="brand-text-wrap">
+                    <span class="brand-title">AMAZON</span>
+                    <span class="brand-subtitle">Restaurant & Resort</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Gallery.html">Gallery & Menu</a>
+                <a href="Contact Us.html" class="active">Contact Us</a>
+                <a href="Book now.html" class="nav-cta-btn">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1920&q=80');">
+            <div class="page-hero-content">
+                <span class="section-tag">24/7 Concierge & Inquiries</span>
+                <h1>We Would Love to Hear from You</h1>
+                <p>Have an inquiry, booking request, or feedback? Get in touch with our hospitality team in Westlands, Nairobi.</p>
+            </div>
+        </section>
+
+        <section class="content-container">
+
+            <!-- CONTACT CARDS GRID -->
+            <div class="contact-grid">
+                <!-- Phone -->
+                <div class="contact-box">
+                    <div class="contact-box-icon">📞</div>
+                    <h3>Direct Phone</h3>
+                    <p>Mon - Sun, 7:00 AM - 11:30 PM</p>
+                    <a href="tel:+254791417772">+254 791 417 772</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-box">
+                    <div class="contact-box-icon">💬</div>
+                    <h3>WhatsApp Concierge</h3>
+                    <p>Fast responses for reservations</p>
+                    <a href="https://wa.me/254791417772" target="_blank">Chat with us on WhatsApp &rarr;</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-box">
+                    <div class="contact-box-icon">✉️</div>
+                    <h3>Official Email</h3>
+                    <p>Corporate events & inquiries</p>
+                    <a href="mailto:ezimbios@email.com">ezimbios@email.com</a>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-box">
+                    <div class="contact-box-icon">📍</div>
+                    <h3>Restaurant Location</h3>
+                    <p>Heart of the city</p>
+                    <span style="color: #ffffff; font-weight: 600;">Woodvale Grove, Westlands, Nairobi</span>
+                </div>
+            </div>
+
+            <!-- MAIN CONTACT CONTENT GRID (FORM + DETAILS) -->
+            <div class="form-wrapper-grid">
+
+                <!-- CONTACT FORM -->
+                <div class="form-card">
+                    <span class="section-tag">Send a Message</span>
+                    <h2>Send Us an Inquiry</h2>
+                    <p>Fill out the form below and our guest relations concierge will get back to you within 2 hours.</p>
+
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="contact_name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="contact_name" class="form-control" placeholder="e.g. John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact_email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="contact_email" class="form-control" placeholder="e.g. john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="contact_phone">Phone / WhatsApp Number</label>
+                                <input type="tel" id="contact_phone" class="form-control" placeholder="e.g. +254 700 000 000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact_subject">Subject / Inquiry Type <span class="required">*</span></label>
+                                <select id="contact_subject" class="form-control" required>
+                                    <option value="" disabled selected>Select subject</option>
+                                    <option value="General Dining Inquiry">General Dining Inquiry</option>
+                                    <option value="Private Banquet or Wedding">Private Banquet or Wedding</option>
+                                    <option value="Corporate Meeting & Conference">Corporate Meeting & Conference</option>
+                                    <option value="Spa & Massage Booking">Spa & Massage Booking</option>
+                                    <option value="Feedback & Compliments">Feedback & Compliments</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_message">Your Message <span class="required">*</span></label>
+                            <textarea id="contact_message" class="form-control" rows="5" placeholder="How can we assist you with your upcoming visit?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit-btn">Send Message to Concierge</button>
+                    </form>
+                </div>
+
+                <!-- SIDEBAR INFORMATION & SOCIAL MEDIA -->
+                <div>
+                    <div class="info-sidebar-card">
+                        <h3>Operating Hours & Access</h3>
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-list-icon">⏰</div>
+                                <div>
+                                    <strong>Restaurant & Lounge</strong>
+                                    <span>Monday – Sunday: 7:00 AM – Midnight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">💆</div>
+                                <div>
+                                    <strong>Spa & Rejuvenation Wing</strong>
+                                    <span>Daily: 8:00 AM – 9:00 PM (Prior booking recommended)</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">🚗</div>
+                                <div>
+                                    <strong>Complimentary Valet Parking</strong>
+                                    <span>Secure, 24/7 guarded underground and open parking available for all diners.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">♿</div>
+                                <div>
+                                    <strong>Accessibility</strong>
+                                    <span>Elevator access and wheelchair ramps throughout the premises.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3 style="margin-top: 30px;">Connect on Social Media</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 15px;">Follow us for daily chef specials, live jazz schedules, and seasonal tasting events:</p>
+                        
+                        <div class="social-pills-list">
+                            <a href="https://www.instagram.com" target="_blank" class="social-pill">📷 Instagram</a>
+                            <a href="https://www.facebook.com" target="_blank" class="social-pill">👍 Facebook</a>
+                            <a href="https://twitter.com" target="_blank" class="social-pill">𝕏 Twitter</a>
+                            <a href="https://www.linkedin.com" target="_blank" class="social-pill">💼 LinkedIn</a>
+                            <a href="https://www.tiktok.com" target="_blank" class="social-pill">🎵 TikTok</a>
+                            <a href="https://www.youtube.com" target="_blank" class="social-pill">▶️ YouTube</a>
+                            <a href="https://t.me" target="_blank" class="social-pill">✈️ Telegram</a>
+                            <a href="https://github.com" target="_blank" class="social-pill">🐙 GitHub</a>
+                        </div>
+
+                        <!-- MAP LOCATION BOX -->
+                        <div class="map-card-placeholder">
+                            <div class="map-icon">🗺️</div>
+                            <h4 style="color: #ffffff; margin-bottom: 5px;">Westlands Location</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Located conveniently off Woodvale Grove, close to major shopping centers in Nairobi.</p>
+                            <a href="https://maps.google.com/?q=Westlands+Nairobi" target="_blank" class="btn btn-outline btn-sm">Get Driving Directions &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-top">
+            <div class="footer-col footer-about">
+                <div class="brand-logo" style="margin-bottom: 15px;">
+                    <div class="brand-icon">🍽</div>
+                    <div class="brand-text-wrap">
+                        <span class="brand-title">AMAZON</span>
+                        <span class="brand-subtitle">Restaurant & Resort</span>
+                    </div>
+                </div>
+                <p>
+                    Founded in 2002 in Westlands, Nairobi. Dedicated to supreme culinary craftsmanship, heartfelt Kenyan hospitality, and serene wellness experiences.
+                </p>
+                <div class="social-pills-list" style="justify-content: flex-start;">
+                    <a href="https://wa.me/254791417772" target="_blank" class="social-pill">WhatsApp</a>
+                    <a href="Services.html" class="social-pill">Instagram</a>
+                    <a href="Services.html" class="social-pill">Facebook</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Us.html">About Us & Heritage</a></li>
+                    <li><a href="Gallery.html">Menu & Price List</a></li>
+                    <li><a href="Services.html">Services & Contact</a></li>
+                    <li><a href="Book now.html">Table Reservation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dining Hours</h4>
+                <ul class="footer-hours-list">
+                    <li>
+                        <strong>Breakfast & Brunch</strong>
+                        Mon - Sun: 7:00 AM – 11:30 AM
+                    </li>
+                    <li>
+                        <strong>Lunch & Afternoon Lounge</strong>
+                        Mon - Sun: 12:00 PM – 4:30 PM
+                    </li>
+                    <li>
+                        <strong>Dinner & Cocktails</strong>
+                        Mon - Sun: 5:00 PM – 11:30 PM
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Find Us in Nairobi</h4>
+                <div class="footer-contact-item">
+                    <span class="icon">📍</span>
+                    <span>Woodvale Grove, Westlands, Nairobi, Kenya</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:+254791417772">+254 791 417 772</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:ezimbios@email.com">ezimbios@email.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> Amazon Restaurant & Resort. All Rights Reserved. Crafted for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('contact_name').value.trim();
+            const email = document.getElementById('contact_email').value.trim();
+            const subject = document.getElementById('contact_subject').value;
+            const message = document.getElementById('contact_message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                showCustomPopup('Incomplete Form', 'Please provide your name, email, subject, and message.', 'error');
+                return;
+            }
+
+            // Success feedback
+            showCustomPopup(
+                'Message Dispatched!',
+                `Thank you, ${name}. Your inquiry regarding "${subject}" has been received. Our hospitality team will contact you shortly via ${email}.`,
+                'success',
+                4000
+            );
+
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>

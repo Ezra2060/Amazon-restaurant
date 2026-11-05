@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table | Amazon Restaurant & Resort Nairobi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .perks-badge-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .perk-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--gold-light);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-subtle);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION HEADER -->
+    <header>
+        <div class="navbar-container">
+            <a href="Home.html" class="brand-logo">
+                <div class="brand-icon">🍽</div>
+                <div class="brand-text-wrap">
+                    <span class="brand-title">AMAZON</span>
+                    <span class="brand-subtitle">Restaurant & Resort</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Gallery.html">Gallery & Menu</a>
+                <a href="Contact Us.html">Contact Us</a>
+                <a href="Book now.html" class="active nav-cta-btn">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');">
+            <div class="page-hero-content">
+                <span class="section-tag">Instant Online Reservation</span>
+                <h1>Reserve Your Table</h1>
+                <p>Join us for an unforgettable dining experience in Westlands, Nairobi. Guarantee your preferred seating with instant concierge confirmation.</p>
+            </div>
+        </section>
+
+        <section class="content-container">
+
+            <div class="form-wrapper-grid">
+
+                <!-- BOOKING FORM CARD -->
+                <div class="form-card">
+                    <span class="section-tag">Guaranteed Seating</span>
+                    <h2>Make a Reservation</h2>
+                    <p>Please provide your reservation details below. For private banquets exceeding 12 guests, our events manager will contact you directly.</p>
+
+                    <form action="#" method="post" id="reservation_form">
+
+                        <!-- Row 1: Name & Phone -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="full_name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="full_name" name="full_name" class="form-control" placeholder="e.g. Grace Mwangi" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telephone_number">Telephone / Mobile <span class="required">*</span></label>
+                                <input type="tel" id="telephone_number" name="telephone_number" class="form-control" placeholder="e.g. 0791417772" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Email & Guests -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="email_address">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email_address" name="email_address" class="form-control" placeholder="e.g. grace@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest_count">Party Size / Guests <span class="required">*</span></label>
+                                <select id="guest_count" name="guest_count" class="form-control" required>
+                                    <option value="1">1 Person (Solo Dining)</option>
+                                    <option value="2" selected>2 Guests (Intimate / Date)</option>
+                                    <option value="3-4">3 - 4 Guests (Small Group / Family)</option>
+                                    <option value="5-8">5 - 8 Guests (Party / Celebration)</option>
+                                    <option value="9+">9+ Guests (Private Dining Hall)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Date & Time -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="reservation_date">Date of Reservation <span class="required">*</span></label>
+                                <input type="date" id="reservation_date" name="reservation_date" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reservation_time">Time of Reservation <span class="required">*</span></label>
+                                <input type="time" id="reservation_time" name="reservation_time" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Seating & Occasion -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="seating_area">Preferred Seating Area</label>
+                                <select id="seating_area" name="seating_area" class="form-control">
+                                    <option value="Main Luxury Hall" selected>Main Luxury Hall (Indoor)</option>
+                                    <option value="Outdoor Terrace">Outdoor Garden Terrace</option>
+                                    <option value="Romantic Balcony">Romantic Candlelit Balcony</option>
+                                    <option value="VIP Private Lounge">VIP Executive Lounge</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occasion">Dining Occasion</label>
+                                <select id="occasion" name="occasion" class="form-control">
+                                    <option value="Casual Dinner" selected>Casual Dinner / Lunch</option>
+                                    <option value="Birthday Celebration">Birthday Celebration</option>
+                                    <option value="Romantic Anniversary">Romantic Anniversary</option>
+                                    <option value="Business Meeting">Business Meeting</option>
+                                    <option value="Family Gathering">Family Gathering</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Row 5: Special Requests -->
+                        <div class="form-group">
+                            <label for="special_requests">Special Dietary or Seating Requests (Max 200 characters)</label>
+                            <textarea rows="3" id="special_requests" name="special_requests" class="form-control" placeholder="Allergies, high-chair needed, champagne on arrival, quiet corner table, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit-btn">Confirm Reservation Request</button>
+                    </form>
+                </div>
+
+                <!-- SIDEBAR INFORMATION & BOOKING BENEFITS -->
+                <div>
+                    <div class="info-sidebar-card">
+                        <h3>Reservation Advantages</h3>
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-list-icon">⚡</div>
+                                <div>
+                                    <strong>Instant Confirmation</strong>
+                                    <span>Immediate booking logging with concierge followup via SMS/WhatsApp within minutes.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">🥂</div>
+                                <div>
+                                    <strong>Welcome Amuse-Bouche</strong>
+                                    <span>All advance online reservations receive complimentary chef welcome refreshments upon arrival.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">🛡️</div>
+                                <div>
+                                    <strong>Flexible Cancellation</strong>
+                                    <span>Plans changed? No cancellation fee when notified at least 2 hours prior to your scheduled time.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-list-icon">🚗</div>
+                                <div>
+                                    <strong>Guaranteed Parking</strong>
+                                    <span>Reserved executive valet parking spot waiting for you upon arrival.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="perks-badge-row">
+                            <span class="perk-pill">✓ No Hidden Fees</span>
+                            <span class="perk-pill">✓ Personalized Table Decor</span>
+                            <span class="perk-pill">✓ Sommelier Pairing</span>
+                        </div>
+
+                        <div style="background: rgba(14, 23, 38, 0.85); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; margin-top: 30px; text-align: center;">
+                            <h4 style="color: var(--gold-light); margin-bottom: 6px;">Need Immediate Assistance?</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">For same-day reservations within 1 hour, please call our head hostess directly:</p>
+                            <a href="tel:+254791417772" class="btn btn-outline btn-sm">📞 Call +254 791 417 772</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-top">
+            <div class="footer-col footer-about">
+                <div class="brand-logo" style="margin-bottom: 15px;">
+                    <div class="brand-icon">🍽</div>
+                    <div class="brand-text-wrap">
+                        <span class="brand-title">AMAZON</span>
+                        <span class="brand-subtitle">Restaurant & Resort</span>
+                    </div>
+                </div>
+                <p>
+                    Founded in 2002 in Westlands, Nairobi. Dedicated to supreme culinary craftsmanship, heartfelt Kenyan hospitality, and serene wellness experiences.
+                </p>
+                <div class="social-pills-list" style="justify-content: flex-start;">
+                    <a href="https://wa.me/254791417772" target="_blank" class="social-pill">WhatsApp</a>
+                    <a href="Services.html" class="social-pill">Instagram</a>
+                    <a href="Services.html" class="social-pill">Facebook</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Us.html">About Us & Heritage</a></li>
+                    <li><a href="Gallery.html">Menu & Price List</a></li>
+                    <li><a href="Services.html">Services & Contact</a></li>
+                    <li><a href="Book now.html">Table Reservation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dining Hours</h4>
+                <ul class="footer-hours-list">
+                    <li>
+                        <strong>Breakfast & Brunch</strong>
+                        Mon - Sun: 7:00 AM – 11:30 AM
+                    </li>
+                    <li>
+                        <strong>Lunch & Afternoon Lounge</strong>
+                        Mon - Sun: 12:00 PM – 4:30 PM
+                    </li>
+                    <li>
+                        <strong>Dinner & Cocktails</strong>
+                        Mon - Sun: 5:00 PM – 11:30 PM
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Find Us in Nairobi</h4>
+                <div class="footer-contact-item">
+                    <span class="icon">📍</span>
+                    <span>Woodvale Grove, Westlands, Nairobi, Kenya</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:+254791417772">+254 791 417 772</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:ezimbios@email.com">ezimbios@email.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> Amazon Restaurant & Resort. All Rights Reserved. Crafted for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set the minimum selectable date to today
+        const dateInput = document.getElementById('reservation_date');
+        if (dateInput) {
+            dateInput.min = new Date().toISOString().split('T')[0];
+        }
+
+        // Reservation Form Submission Logic with Validation
+        document.getElementById('reservation_form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const fullname = document.getElementById('full_name').value.trim();
+            const telephone = document.getElementById('telephone_number').value.trim();
+            const email = document.getElementById('email_address').value.trim();
+            const reservationDate = document.getElementById('reservation_date').value;
+            const reservationTime = document.getElementById('reservation_time').value;
+            const guestCount = document.getElementById('guest_count').value;
+            const seatingArea = document.getElementById('seating_area').value;
+            const occasion = document.getElementById('occasion').value;
+            const specialRequests = document.getElementById('special_requests').value.trim();
+
+            if (!fullname || !telephone || !email || !reservationDate || !reservationTime) {
+                showCustomPopup('Missing Details', 'Please fill in all required fields indicated with an asterisk (*).', 'error');
+                return;
+            }
+            
+            if (fullname.length < 3) {
+                showCustomPopup('Invalid Name', 'Full name must contain at least 3 characters.', 'error');
+                return;
+            }
+
+            // Validates 10-digit Kenyan numbers (e.g. 07XXXXXXXX) or international numbers (+254...)
+            const phoneClean = telephone.replace(/[\s-]/g, '');
+            if (!/^(?:\+254|0)[17]\d{8}$|^\d{10}$/.test(phoneClean)) {
+                showCustomPopup('Invalid Phone', 'Please enter a valid telephone number (e.g. 0791417772 or +254 791 417 772).', 'error');
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showCustomPopup('Invalid Email', 'Please enter a valid email address so we can confirm your booking.', 'error');
+                return;
+            }
+
+            // Check reservation date is not in past
+            const selectedDate = new Date(reservationDate);
+            selectedDate.setHours(0, 0, 0, 0);
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            if (selectedDate < today) {
+                showCustomPopup('Invalid Date', 'The reservation date cannot be in the past.', 'error');
+                return;
+            }
+
+            // Check time if date is today
+            if (selectedDate.getTime() === today.getTime()) {
+                const [hours, minutes] = reservationTime.split(':');
+                const reservationDateTime = new Date();
+                reservationDateTime.setHours(hours, minutes, 0, 0);
+
+                if (reservationDateTime < new Date()) {
+                    showCustomPopup('Invalid Time', 'Please select a future reservation time for today.', 'error');
+                    return;
+                }
+            }
+
+            if (specialRequests.length > 200) {
+                showCustomPopup('Request Exceeded', 'Special requests should not exceed 200 characters.', 'error');
+                return;
+            }
+
+            // Success feedback
+            document.getElementById('reservation_form').reset();
+            if (dateInput) {
+                dateInput.min = new Date().toISOString().split('T')[0];
+            }
+
+            showCustomPopup(
+                'Reservation Confirmed!',
+                `Thank you, ${fullname}. Your reservation for ${guestCount} guest(s) on ${reservationDate} at ${reservationTime} (${seatingArea}) has been successfully submitted! A confirmation has been sent to ${email}.`,
+                'success',
+                6000
+            );
+        });
+    </script>
+</body>
+</html>
